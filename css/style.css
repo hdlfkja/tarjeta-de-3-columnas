@@ -1,0 +1,122 @@
+:root {
+    --naranja: hsl(31, 77%, 52%);
+    --cianOscuro: hsl(184, 100%, 22%);
+    --cianMuyOscuro: hsl(179, 100%, 13%);
+    --blancoTransparente: hsla(0, 0%, 100%, 0.75);
+    --blanco: hsl(0, 0%, 100%);
+    --grisClaro: hsl(0, 0%, 95%);
+
+    --fuenteParrafos: 'Lexend Deca', sans-serif;
+    --fuenteTitulos: 'Big Shoulders Display', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+body {
+    font-size: 1.5rem;
+    color: var(--blancoTransparente);
+}
+
+/* Globales */
+h2 {
+    font-size: 3.3rem;
+    font-family: var(--fuenteTitulos);
+}
+p {
+    line-height: 2.5rem;
+    font-family: var(--fuenteParrafos);
+}
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem 0;
+}
+.contenedor {
+    width: min(85%, 100rem);
+
+}
+@media (min-width: 768px) {
+    .contenedor-flex {
+        margin: unset;
+        height: 100vh;
+    }
+    .contenedor {
+        display: flex;
+    }
+}
+.contenido {
+    padding: 4rem;
+}
+@media (min-width: 768px) {
+    .contenido {
+        padding-bottom: 7rem;
+    }
+}
+/* Color de fondo */
+.contenido--bg1 {
+    background-color: var(--naranja);
+    border-radius: .5rem .5rem 0 0;
+}
+.contenido--bg2 {
+    background-color: var(--cianOscuro);
+}
+.contenido--bg3 {
+    background-color: var(--cianMuyOscuro);
+    border-radius: 0 0 .5rem .5rem;
+}
+@media (min-width: 768px) {
+    .contenido--bg1 {
+        border-radius: .5rem 0 0 .5rem;
+    }
+    .contenido--bg3 {
+        border-radius: 0 .5rem .5rem 0;
+    }
+}
+
+/* Contenido */
+.contenido__imagen {
+    width: auto;
+}
+.contenido__titulo {
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+.contenido__parrafo {
+    margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .contenido__parrafo {
+        margin-bottom: 10rem;
+    }
+}
+
+/* Boton */
+.contenido__boton {
+    background-color: var(--blanco);
+    padding: 1.5rem 4rem;
+    border-radius: 3rem;
+    border: none;
+    font-family: var(--fuenteParrafos);
+    border: 2px solid var(--blanco);
+}
+.contenido__boton:hover {
+    background-color: unset;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.contenido__boton--color1 {
+    color: var(--naranja);
+}
+.contenido__boton--color2 {
+    color: var(--cianOscuro);
+}
+.contenido__boton--color3 {
+    color: var(--cianMuyOscuro);
+}
